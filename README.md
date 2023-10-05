@@ -203,4 +203,111 @@ Git permite la creación de ramas lo que permite tener distintas versiones del m
 - Añadir los cambios a la zona de intercambio temporal.
 - Hacer un commit de los cambios con el mensaje Añadido capítulo 3.
 - Mostrar las diferencias entre la primera y la última versión del repositorio.
+- __Solución:__
 
+```code
+nano capitulos/capitulo3.txt
+Git permite la creación de ramas lo que permite tener distintas versiones del mismo proyecto y trabajar de manera simultanea en ellas.
+Ctrl + X
+S
+Enter
+git add .
+git commit -m "Añadido capítulo 3"
+git log
+git diff
+```
+
+
+- git commit -m "Añadido capítulo 3"
+    - salida:
+        ```code
+        [main 584ac18] Añadido capítulo 3
+        2 files changed, 47 insertions(+), 2 deletions(-)
+        create mode 100644 capitulos/capitulo3.txt
+        ```
+- git diff 4dcb74b18a32f24061bc2e7c415f09f7aaff4971..HEAD
+    - salida:
+
+
+
+        ```code
+        diff --git a/capitulos/capitulo1.txt b/capitulos/capitulo1.txt
+        +
+        diff --git a/capitulos/capitulo1.txt b/capitulos/capitulo1.txt
+        new file mode 100644
+        index 0000000..f4068a7
+        --- /dev/null
+        +++ b/capitulos/capitulo1.txt
+        @@ -0,0 +1 @@
+        +Git es un sistema de control de versiones ideado por Linus Torvalds.
+        \ No newline at end of file
+
+        diff --git a/capitulos/capitulo2.txt b/capitulos/capitulo2.txt
+        new file mode 100644
+        index 0000000..b18ed63
+        --- /dev/null
+        +++ b/capitulos/capitulo2.txt
+        @@ -0,0 +1,4 @@
+        +El flujo de trabajo básico con Git consiste en: 
+        +1- Hacer cambios en el repositorio. 
+        +2- Añadir los cambios a la zona de intercambio temporal. 
+        +3- Hacer un commit de los cambios.
+        \ No newline at end of file
+
+        diff --git a/capitulos/capitulo3.txt b/capitulos/capitulo3.txt
+        new file mode 100644
+        index 0000000..534b9a9
+        --- /dev/null
+        +++ b/capitulos/capitulo3.txt
+        @@ -0,0 +1 @@
+        +Git permite la creación de ramas lo que permite tener distintas versiones del mismo proyecto y trabajar de manera simultanea en ellas.
+        \ No newline at end of file
+
+        diff --git a/img/README.md b/img/README.md
+        diff --git a/img/README.md b/img/README.md
+        diff --git a/img/README.md b/img/README.md
+        new file mode 100644
+        index 0000000..bfcf422
+        --- /dev/null
+        +++ b/img/README.md
+        @@ -0,0 +1 @@
+        +# Título 2
+        diff --git a/prueba2/file2.clean b/prueba2/file2.clean
+        new file mode 100644
+        index 0000000..e69de29
+        diff --git a/test/file.clean b/test/file.clean
+        new file mode 100644
+        index 0000000..e69de29
+        ``````
+
+## Ejercicio 4
+- Crea el fichero índice.txt la siguiente línea:
+
+```code
+Indice de los cápitulos, con conceptos avanzados de git
+```
+
+- Añadir los cambios a la zona de intercambio temporal.
+
+
+- Hacer un commit de los cambios con el mensaje "Indice de los cápitulos, con conceptos avanzados de git.
+
+- Mostrar quién ha hecho cambios sobre el fichero indice.txt.
+
+- __Solución:__
+
+```code
+nano indice.txt
+Indice de los cápitulos, con conceptos avanzados de git
+Ctrl + X
+S
+Enter
+git commit -m "Indice de los cápitulos, con conceptos avanzados de git"
+git annotate indice.txt
+```
+- git commit -m "Indice de los cápitulos, con conceptos avanzados de git"
+    - salida:
+
+        ```code
+
+        ```
