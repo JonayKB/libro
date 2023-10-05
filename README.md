@@ -1,8 +1,10 @@
 # Libro
 Repositorio dedicado para la realización de test con git
 # Git Avanzado - Jonay Contreras
-1. [Ejercicio1](#Ejercicio-1)
-2. [Clonado](#Clonado)
+
+1. [Clonado](#clonado)
+2. [Ejercicio 1](#ejercicio-1)
+3. [Ejercicio 2](#ejercicio-2)
 
 ## Clonado
 ```code
@@ -42,7 +44,7 @@ Git es un sistema de control de versiones ideado por Linus Torvalds.
 ```code
 git log
 mkdir capitulos
-nano capitulo1
+nano capitlos/capitulo1.txt
 Git es un sistema de control de versiones ideado por Linus Torvalds.
 Ctrl + x
 S
@@ -96,4 +98,65 @@ git log
         Author: Joatham Pérez Expósito <jpe.gsc@gmail.com>
         Date:   Mon Sep 27 11:57:59 2021 +0100
         Initial commit
+        ```
+
+
+
+
+- git commit -m "Añadimos capitulos y capitulo1"
+    - salida:
+
+        ```code
+        [main d381bea] Añadimos capitulos y capitulo1
+         2 files changed, 81 insertions(+), 1 deletion(-)
+        create mode 100644 capitulos/capitulo1.txt
+        ```
+
+
+
+- git log
+    - salida
+
+        ```code
+        commit d381beac569022efd95d3024f9293fbd3b9e3a2d (HEAD -> main)
+        Author: jonaykb <jonaykb@gmail.com>
+        Date:   Thu Oct 5 09:22:42 2023 +0100
+
+        Añadido capítulo 1
+        ```
+
+
+
+## Ejercicio 2
+
+- Crear el fichero capitulo2.txt en la carpeta capítulos con el siguiente texto.
+
+```code
+El flujo de trabajo básico con Git consiste en: 1- Hacer cambios en el 
+repositorio. 2- Añadir los cambios a la zona de intercambio temporal. 3- Hacer un commit de los cambios.
+```
+
+- Añadir los cambios a la zona de intercambio temporal.
+- Hacer un commit de los cambios con el mensaje Añadido capítulo 2.
+- Mostrar las diferencias entre la última versión y dos versiones anteriores.
+- __Solución:__
+
+```code
+nano capitulos/capitulo2.txt
+El flujo de trabajo básico con Git consiste en: 
+1- Hacer cambios en el repositorio. 
+2- Añadir los cambios a la zona de intercambio temporal. 
+3- Hacer un commit de los cambios.
+Ctrl + X
+S
+Enter
+git add .
+git commit -m "Añadido capítulo 2"
+```
+
+- git commit -m "Añadido capítulo 2"
+    - salida
+
+        ```code
+        
         ```
