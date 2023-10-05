@@ -198,6 +198,7 @@ git diff HEAD~2..HEAD
         +3- Hacer un commit de los cambios.
         \ No newline at end of file
         ```
+
 ## Ejercicio 3
 - Crear el fichero capitulo3.txt en la carpeta capítulos con el siguiente texto.
 
@@ -285,7 +286,9 @@ git diff
         index 0000000..e69de29
         ``````
 
+
 ## Ejercicio 4
+
 - Crea el fichero índice.txt la siguiente línea:
 
 ```code
@@ -391,7 +394,7 @@ git log --graph --all --oneline
         * 3ea9800 se crea la carpeta img #1
         * 4dcb74b Initial commit
         ```
-
+---
 ## Ejercicio 7
 - Cambiar a la rama bibliografía.
 - Crear el fichero bibliografia.txt y añadir la siguiente referencia:
@@ -416,3 +419,37 @@ git add .
 git commit -m "Añadida primera referencia bibliográfica."
 git log --graph --all --oneline
 ```
+
+- git checkout bibliografia
+    - salida:  
+        ```code
+        Switched to branch 'bibliografia'
+        ```
+
+
+- git commit -m "Añadida primera referencia bibliográfica."
+    - salida
+        ```code
+        [bibliografia 2cb2d33] Añadida primera referencia bibliográfica.
+        2 files changed, 116 insertions(+), 1 deletion(-)
+        create mode 100644 bibliografia.txt
+        ```
+
+- git log --graph --all --oneline
+    - salida:
+        ```code
+        * 2cb2d33 (HEAD -> bibliografia) Añadida primera referencia bibliográfica.
+        | * 49f8132 Añadido capítulo 4
+        |/
+        * 385db21 Indice de los cápitulos, con conceptos avanzados de git
+        * 584ac18 Añadido capítulo 3
+        * 87a952d Añadido capítulo 2
+        * d381bea Añadimos capitulos y capitulo1
+        * 1016a8a se añade la segunda carpeta
+        * 3f26704 mensaje
+        * 8a81c55 Se añade un título
+        * fbe91b2 closed #1
+        * 3ea9800 se crea la carpeta img #1
+        * 4dcb74b Initial commit
+        ```
+    ---
