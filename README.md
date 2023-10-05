@@ -5,6 +5,11 @@ Repositorio dedicado para la realización de test con git
 1. [Clonado](#clonado)
 2. [Ejercicio 1](#ejercicio-1)
 3. [Ejercicio 2](#ejercicio-2)
+4. [Ejercicio 3](#ejercicio-3)
+5. [Ejercicio 4](#ejercicio-4)
+6. [Ejercicio 5](#ejercicio-5)
+6. [Ejercicio 6](#ejercicio-6)
+7. [Ejercicio 7](#ejercicio-7)
 
 ## Clonado
 ```code
@@ -309,5 +314,55 @@ git annotate indice.txt
     - salida:
 
         ```code
-
+        [main 385db21] Indice de los cápitulos, con conceptos avanzados de git
+        2 files changed, 108 insertions(+)
+        create mode 100644 indice.txt
         ```
+
+- git annotate indice.txt
+    - salida:
+
+        ```code
+        385db218        (   jonaykb     2023-10-05 09:50:00 +0100       1)Indice de los cápitulos, con conceptos avanzados de git
+        ```
+
+## Ejercicio 5
+- Crear una nueva rama bibliografía y mostrar las ramas del repositorio.
+- __Solución:__
+
+```code
+git branch bibliografia
+git branch
+```
+
+- git branch
+    - salida:
+
+    ```code
+      bibliografia
+    * main
+    ```
+
+
+## Ejercicio 6
+- Crear el fichero capitulos/capitulo4.txt y añadir el texto siguiente:
+
+```code
+  En este capítulo veremos cómo usar GitHub para alojar repositorios en remoto.
+```
+
+- Añadir los cambios a la zona de intercambio temporal.
+- Hacer un commit con el mensaje “Añadido capítulo 4.”
+- Mostrar la historia del repositorio incluyendo todas las ramas.
+- __Solución:__
+
+```code
+nano capitulos/capitulo4.txt
+En este capítulo veremos cómo usar GitHub para alojar repositorios en remoto.
+Ctrl + X
+S
+Enter
+git add .
+git commit -m "Añadido capítulo 4"
+git log --graph --all --oneline
+```
