@@ -366,3 +366,53 @@ git add .
 git commit -m "Añadido capítulo 4"
 git log --graph --all --oneline
 ```
+- git commit -m "Añadido capítulo 4"
+    - salida:
+
+        ```code
+        [main 49f8132] Añadido capítulo 4
+        2 files changed, 57 insertions(+), 1 deletion(-)
+        create mode 100644 capitulos/capitulo4.txt
+        ```
+
+- git log --graph --all --oneline
+    - salida:
+
+        ```code
+        * 49f8132 (HEAD -> main) Añadido capítulo 4
+        * 385db21 (bibliografia) Indice de los cápitulos, con conceptos avanzados de git
+        * 584ac18 Añadido capítulo 3
+        * 87a952d Añadido capítulo 2
+        * d381bea Añadimos capitulos y capitulo1
+        * 1016a8a se añade la segunda carpeta
+        * 3f26704 mensaje
+        * 8a81c55 Se añade un título
+        * fbe91b2 closed #1
+        * 3ea9800 se crea la carpeta img #1
+        * 4dcb74b Initial commit
+        ```
+
+## Ejercicio 7
+- Cambiar a la rama bibliografía.
+- Crear el fichero bibliografia.txt y añadir la siguiente referencia:
+
+```code
+Chacon, S. and Straub, B. Pro Git. Apress.
+```
+
+- Añadir los cambios a la zona de intercambio temporal.
+- Hacer un commit con el mensaje “Añadida primera referencia bibliográfica.”
+- Mostrar la historia del repositorio incluyendo todas las ramas.
+- __Solución:__
+
+```code
+git checkout bibliografia
+git nano bibliografia.txt
+Chacon, S. and Straub, B. Pro Git. Apress.
+Ctrl + X
+S
+Enter
+git add .
+git commit -m "Añadida primera referencia bibliográfica."
+git log --graph --all --oneline
+```
