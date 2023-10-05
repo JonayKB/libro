@@ -152,11 +152,55 @@ S
 Enter
 git add .
 git commit -m "Añadido capítulo 2"
+git diff HEAD~2..HEAD
 ```
 
 - git commit -m "Añadido capítulo 2"
     - salida
 
         ```code
-        
+        [main 87a952d] Añadido capítulo 2
+         2 files changed, 70 insertions(+), 3 deletions(-)
+        create mode 100644 capitulos/capitulo2.txt
         ```
+
+
+
+- git diff HEAD~2..HEAD
+    - salida:
+
+        ```code
+        diff --git a/capitulos/capitulo1.txt b/capitulos/capitulo1.txt
+        new file mode 100644
+        index 0000000..f4068a7
+        --- /dev/null
+        +++ b/capitulos/capitulo1.txt
+        @@ -0,0 +1 @@
+
+        +Git es un sistema de control de versiones ideado por Linus Torvalds.
+        \ No newline at end of file
+
+        diff --git a/capitulos/capitulo2.txt b/capitulos/capitulo2.txt
+        new file mode 100644
+        index 0000000..b18ed63
+        --- /dev/null
+        +++ b/capitulos/capitulo2.txt
+        @@ -0,0 +1,4 @@
+
+        +El flujo de trabajo básico con Git consiste en: 
+        +1- Hacer cambios en el repositorio. 
+        +2- Añadir los cambios a la zona de intercambio temporal. 
+        +3- Hacer un commit de los cambios.
+        \ No newline at end of file
+        ```
+## Ejercicio 3
+- Crear el fichero capitulo3.txt en la carpeta capítulos con el siguiente texto.
+
+```code
+Git permite la creación de ramas lo que permite tener distintas versiones del mismo proyecto y trabajar de manera simultanea en ellas.
+```
+
+- Añadir los cambios a la zona de intercambio temporal.
+- Hacer un commit de los cambios con el mensaje Añadido capítulo 3.
+- Mostrar las diferencias entre la primera y la última versión del repositorio.
+
